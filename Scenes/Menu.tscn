@@ -1,0 +1,338 @@
+[gd_scene load_steps=50 format=3 uid="uid://cv5kpyt63taqt"]
+
+[ext_resource type="Texture2D" uid="uid://d4kjyteylx4up" path="res://Assets/walle background.png" id="1_f2osj"]
+[ext_resource type="Script" path="res://Menu.cs" id="1_mkklm"]
+[ext_resource type="FontFile" uid="uid://dpvdnbyr4kqfm" path="res://Assets/PressStart2P.ttf" id="2_htlmc"]
+[ext_resource type="AudioStream" uid="uid://bjbymt2igxxo3" path="res://Assets/Walt s Piano - Define Dancing (From Disney s,  Wall-E ).mp3" id="3_dpfae"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2100s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s5c1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_14yub"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s6xxs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kf0g5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7hpop"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tj8u3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e5tsp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4h7m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3xqv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4y3tl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wjo61"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nsh35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qb2kp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_inrwh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v8gpc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j47jg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oqb62"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_baysy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_txsu4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vhhk2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t51p7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irkoa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y0omf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifnis"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fiqkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k8wbf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8vbhe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_381n0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uduse"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nmy6d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkunb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_601h7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aff4i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7mgm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwv4a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tc4ol"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_muj8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4y73p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fasnb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cyx53"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wn5gt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkf03"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rybh0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxgnv"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mkklm")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.529067, 0.529067, 0.529067, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0286458
+anchor_top = -0.0833333
+anchor_right = 1.03906
+anchor_bottom = 1.01543
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_f2osj")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PIXEL" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0772569
+anchor_top = 0.087963
+anchor_right = 0.47309
+anchor_bottom = 0.233025
+theme_override_colors/default_color = Color(1, 0.843137, 0.25098, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_htlmc")
+theme_override_font_sizes/normal_font_size = 85
+text = "PIXEL"
+metadata/_edit_use_anchors_ = true
+
+[node name="WALLE" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0329861
+anchor_top = 0.240741
+anchor_right = 0.525174
+anchor_bottom = 0.41821
+theme_override_colors/default_color = Color(1, 0.843137, 0.25098, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_htlmc")
+theme_override_font_sizes/normal_font_size = 104
+text = "WALLE"
+metadata/_edit_use_anchors_ = true
+
+[node name="NuevoDocumento" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0572917
+anchor_top = 0.425926
+anchor_right = 0.334003
+anchor_bottom = 0.584092
+offset_right = 51.2289
+offset_bottom = -28.4918
+scale = Vector2(0.861543, 1.38502)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_htlmc")
+theme_override_font_sizes/font_size = 37
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2100s")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_s5c1b")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_14yub")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_s6xxs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_kf0g5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7hpop")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tj8u3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_e5tsp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_l4h7m")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_v3xqv")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4y3tl")
+text = " NUEVO
+ DOCUMENTO
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="AbrirArchivo" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.269965
+anchor_top = 0.594136
+anchor_right = 0.408127
+anchor_bottom = 0.702727
+offset_left = -1.52588e-05
+offset_top = -3.05176e-05
+offset_right = 8.83777
+offset_bottom = -16.3675
+scale = Vector2(0.947394, 1.3031)
+theme_override_colors/icon_normal_color = Color(0.878431, 0.878431, 0.878431, 1)
+theme_override_fonts/font = ExtResource("2_htlmc")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_wjo61")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_nsh35")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qb2kp")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_inrwh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_v8gpc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_j47jg")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_oqb62")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_baysy")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_txsu4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vhhk2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t51p7")
+text = "ABRIR
+ARCHIVO"
+metadata/_edit_use_anchors_ = true
+
+[node name="AcercaDe" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.133681
+anchor_top = 0.694444
+anchor_right = 0.24417
+anchor_bottom = 0.798989
+offset_right = 5.71674
+offset_bottom = -25.7448
+scale = Vector2(0.957017, 1.61297)
+theme_override_colors/font_color = Color(0.243137, 0.152941, 0.137255, 1)
+theme_override_fonts/font = ExtResource("2_htlmc")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/focus = SubResource("StyleBoxEmpty_irkoa")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_y0omf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ifnis")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_fiqkl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k8wbf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8vbhe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_381n0")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_uduse")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_nmy6d")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_pkunb")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_601h7")
+text = "ACERCA
+DE"
+metadata/_edit_use_anchors_ = true
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.215278
+anchor_top = 0.828704
+anchor_right = 0.297083
+anchor_bottom = 0.890929
+offset_right = 10.7605
+offset_bottom = -10.3219
+scale = Vector2(0.897519, 1.34406)
+theme_override_colors/font_color = Color(1, 0.843137, 0.25098, 1)
+theme_override_fonts/font = ExtResource("2_htlmc")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aff4i")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_d7mgm")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gwv4a")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_tc4ol")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_muj8w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4y73p")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fasnb")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_cyx53")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wn5gt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wkf03")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rybh0")
+text = "SALIR"
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelAcercaDe" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+anchor_left = 0.0555556
+anchor_top = 0.101852
+anchor_right = 0.958333
+anchor_bottom = 0.899691
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="HIstoria" type="RichTextLabel" parent="PanelAcercaDe"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0288462
+anchor_top = 0.0290135
+anchor_right = 0.974199
+anchor_bottom = 0.637718
+offset_right = -211.167
+offset_bottom = -29.7002
+scale = Vector2(1.27353, 1.10421)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_htlmc")
+theme_override_font_sizes/normal_font_size = 35
+text = "Wall-E se aburrió de las figuras 
+geométricas, en cambio,  ahora quiere 
+dedicarse  al Pixel-art. ¡¡¡Con esta 
+aplicación ahora es posible!!!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Detalles" type="RichTextLabel" parent="PanelAcercaDe"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0230769
+anchor_top = 0.644101
+anchor_right = 0.888516
+anchor_bottom = 0.808786
+offset_right = 205.943
+offset_bottom = 31.8576
+scale = Vector2(0.813795, 0.727713)
+theme_override_font_sizes/normal_font_size = 25
+text = " Desarrollado por: Karen Negrin Mazario C111 
+ Desarrolado con: Godot 4.3
+ Especificaciones del lenguaje: Profundizado en el documento de orientación \"Pixel Walle\""
+metadata/_edit_use_anchors_ = true
+
+[node name="Volver" type="Button" parent="PanelAcercaDe"]
+layout_mode = 0
+anchor_left = 0.354808
+anchor_top = 0.820116
+anchor_right = 0.653846
+anchor_bottom = 0.970986
+theme_override_fonts/font = ExtResource("2_htlmc")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gxgnv")
+text = "VOLVER"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dpfae")
+
+[connection signal="pressed" from="NuevoDocumento" to="." method="_on_nuevo_documento_pressed"]
+[connection signal="pressed" from="AbrirArchivo" to="." method="_on_abrir_archivo_pressed"]
+[connection signal="pressed" from="AcercaDe" to="." method="_on_acerca_de_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="PanelAcercaDe/Volver" to="." method="_on_volver_pressed"]
