@@ -136,6 +136,7 @@ public void UnPlaceTileInGrid(int gridX, int gridY)
     }
     public void ResetStats()
     {
+        ClearAllTiles();
         GodotCommands._currentPosition=new Vector2I(-1, -1);
         GodotCommands.spawngrafico=false;
         _currentBrushSize=1;
