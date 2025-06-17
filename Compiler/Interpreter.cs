@@ -18,6 +18,9 @@ namespace PixelWallE
         public string BrushColor { get; private set; } = "Transparent";
         public int BrushSize { get; private set; } = 1;
         public bool HasSpawned { get; private set; } = false;
+        private int _jumpCount = 0;
+        private const int MaxJumpCount = 1000;
+
 
         public Interpreter(ProgramNode program)
         {
@@ -28,6 +31,8 @@ namespace PixelWallE
 
         public void Interpret()
         {
+            _currentStatement = 0;
+            _jumpCount = 0;
             _currentStatement = 0;
 
             while (_currentStatement < _program.Statements.Count)
@@ -45,6 +50,11 @@ namespace PixelWallE
                 catch (RuntimeError ex)
                 {
                     Result.AddError(ex.Message);
+                    break;
+                }
+                if (_jumpCount > MaxJumpCount)
+                {
+                    Result.AddError("Execution halted: Possible infinite loop detected");
                     break;
                 }
             }
@@ -263,6 +273,7 @@ namespace PixelWallE
             bool condition = EvaluateExpression(goTo.Condition);
             if (condition)
             {
+                _jumpCount++;
                 if (!_labels.TryGetValue(goTo.Label.Value, out int targetLine))
                 {
                     throw new RuntimeError($"Line {goTo.Token.LineNumber}: Label '{goTo.Label.Value}' not found");
