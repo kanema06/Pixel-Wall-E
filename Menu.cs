@@ -21,7 +21,7 @@ public partial class Menu : Control
 	public void _on_abrir_archivo_pressed()
 	{
 		abrirarchivo=true;
-		GetTree().ChangeSceneToFile("res://Scenes/CompilerUi.tscn");
+		GetTree().ChangeSceneToPacked((PackedScene)ResourceLoader.Load("res://Scenes/CompilerUI.tscn"));
 	}
 	
 	public void _on_salir_pressed()
@@ -35,7 +35,8 @@ public partial class Menu : Control
 	}
 	public void _on_nuevo_documento_pressed()
 	{
-		GetTree().ChangeSceneToFile("res://Scenes/CompilerUi.tscn");
+		
+		GetTree().ChangeSceneToPacked((PackedScene)ResourceLoader.Load("res://Scenes/CompilerUI.tscn"));
 	}
 
 	public override void _Process(double delta)
