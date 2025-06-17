@@ -403,6 +403,7 @@ script = ExtResource("4_esrvq")
 metadata/_edit_use_anchors_ = true
 
 [node name="FileDialog" type="FileDialog" parent="."]
+filters = PackedStringArray("*.pw")
 
 [node name="CustomCursor" type="Node" parent="."]
 script = ExtResource("53_7fs3o")

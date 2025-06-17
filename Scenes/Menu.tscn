@@ -128,8 +128,7 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="PIXEL" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.0772569
 anchor_top = 0.087963
 anchor_right = 0.47309
@@ -143,8 +142,7 @@ text = "PIXEL"
 metadata/_edit_use_anchors_ = true
 
 [node name="WALLE" type="RichTextLabel" parent="."]
-layout_mode = 1
-anchors_preset = -1
+layout_mode = 0
 anchor_left = 0.0329861
 anchor_top = 0.240741
 anchor_right = 0.525174
@@ -330,6 +328,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_dpfae")
+autoplay = true
 
 [connection signal="pressed" from="NuevoDocumento" to="." method="_on_nuevo_documento_pressed"]
 [connection signal="pressed" from="AbrirArchivo" to="." method="_on_abrir_archivo_pressed"]
