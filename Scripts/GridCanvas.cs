@@ -150,7 +150,7 @@ public void UnPlaceTileInGrid(int gridX, int gridY)
     {
         return color;
     }
-    return Colors.White; 
+    return Colors.Transparent; 
 }  
 public int CountColorInArea(string colorName, int x1, int y1, int x2, int y2)
 {
