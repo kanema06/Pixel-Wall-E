@@ -242,9 +242,9 @@ namespace PixelWallE
                 throw new RuntimeError($"Line {drawRectangle.Token.LineNumber}: Direction values must be -1, 0, or 1");
             }
 
-            if (distance <= 0 || width <= 0 || height <= 0)
+            if (distance < 0 || width <= 0 || height <= 0)
             {
-                throw new RuntimeError($"Line {drawRectangle.Token.LineNumber}: Distance, width, and height must be positive");
+                throw new RuntimeError($"Line {drawRectangle.Token.LineNumber}: Distance must be non-negative, width and height must be positive");
             }
 
             int centerX = WallE_X + dirX * distance;

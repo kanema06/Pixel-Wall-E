@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace PixelWallE
 {
-    
+
     public class Parser
     {
         public ExecutionResult Result { get; } = new ExecutionResult();
@@ -17,40 +17,40 @@ namespace PixelWallE
             _current = 0;
         }
 
-public ProgramNode Parse() 
-{
-    var (program, _) = ParseWithResult();
-    return program;
-}
-public (ProgramNode Program, ExecutionResult Result) ParseWithResult()
-{
-    var statements = new List<StatementNode>();
-    var labels = new Dictionary<string, int>();
-    
-    _current = 0;
-    
-    while (!IsAtEnd())
-    {
-        try
+        public ProgramNode Parse()
         {
-            var statement = ParseStatement();
-            if (statement != null)
+            var (program, _) = ParseWithResult();
+            return program;
+        }
+        public (ProgramNode Program, ExecutionResult Result) ParseWithResult()
+        {
+            var statements = new List<StatementNode>();
+            var labels = new Dictionary<string, int>();
+
+            _current = 0;
+
+            while (!IsAtEnd())
             {
-                if (statement is LabelNode labelNode)
+                try
                 {
-                    labels[labelNode.Label.Value] = statements.Count;
+                    var statement = ParseStatement();
+                    if (statement != null)
+                    {
+                        if (statement is LabelNode labelNode)
+                        {
+                            labels[labelNode.Label.Value] = statements.Count;
+                        }
+                        statements.Add(statement);
+                    }
                 }
-                statements.Add(statement);
+                catch (ParseError)
+                {
+                    Synchronize();
+                }
             }
+
+            return (new ProgramNode(statements, labels), Result);
         }
-        catch (ParseError)
-        {
-            Synchronize();
-        }
-    }
-    
-    return (new ProgramNode(statements, labels), Result);
-}
 
         private StatementNode ParseStatement()
         {
@@ -62,18 +62,16 @@ public (ProgramNode Program, ExecutionResult Result) ParseWithResult()
             if (Match(TokenType.DrawRectangle)) return ParseDrawRectangle();
             if (Match(TokenType.Fill)) return ParseFill();
             if (Match(TokenType.GoTo)) return ParseGoTo();
-             if (Check(TokenType.Identifier))
-    {
-             TokenType? nextType = PeekAhead(1)?.Type;
-        
-             if (nextType == TokenType.Colon) 
-              return ParseLabel();
-            
-             if (nextType == TokenType.Assignment) 
-              return ParseAssignment();
-    }
-    
-             
+            if (Check(TokenType.Identifier))
+            {
+                TokenType? nextType = PeekAhead(1)?.Type;
+
+                 if (nextType == null || PeekAhead(1).LineNumber > PeekAhead(0).LineNumber)
+        return ParseLabel();
+
+                if (nextType == TokenType.Assignment)
+                    return ParseAssignment();
+            }
             throw Error(Peek(), "Expected statement.");
         }
 
@@ -177,10 +175,9 @@ public (ProgramNode Program, ExecutionResult Result) ParseWithResult()
             return new AssignmentNode(identifier, expression);
         }
 
-         private LabelNode ParseLabel()
+        private LabelNode ParseLabel()
         {
             var identifier = Consume(TokenType.Identifier, "Expect label name.");
-            Consume(TokenType.Colon, "Expect ':' after label name.");
             return new LabelNode(identifier);
         }
 
@@ -260,15 +257,15 @@ public (ProgramNode Program, ExecutionResult Result) ParseWithResult()
         }
 
         private ExpressionNode ParseUnary()
-    {
-    if (Match(TokenType.Minus))
-    {
-        var op = Previous();
-        var right = ParsePrimary();
-        return new UnaryNode(op, right);
-    }
-    return ParsePrimary();
-    }
+        {
+            if (Match(TokenType.Minus))
+            {
+                var op = Previous();
+                var right = ParsePrimary();
+                return new UnaryNode(op, right);
+            }
+            return ParsePrimary();
+        }
 
         private ExpressionNode ParsePrimary()
         {
@@ -386,9 +383,9 @@ public (ProgramNode Program, ExecutionResult Result) ParseWithResult()
         }
         private Token PeekAhead(int lookahead = 1)
         {
-        int pos = _current + lookahead;
-        return pos < _tokens.Count ? _tokens[pos] : null;
-        }       
+            int pos = _current + lookahead;
+            return pos < _tokens.Count ? _tokens[pos] : null;
+        }
         private bool IsAtEnd() => Peek().Type == TokenType.EndOfFile;
 
         private Token Peek() => _tokens[_current];

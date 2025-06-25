@@ -204,7 +204,7 @@ namespace PixelWallE
                 if (visited.Contains(current)) continue;
                 visited.Add(current);
                 if (GetPixelColor(current.X, current.Y) != targetColor) continue;
-                PaintWithBrushSize(current.X, current.Y);
+                  GridCanvas.Instance.PaintGridCell(current.X, current.Y, GridCanvas.Instance.PaintColor);
                 // Check adjacent pixels
                 if (current.X > 0) pixelsToCheck.Enqueue(new Vector2I(current.X - 1, current.Y));
                 if (current.X < 512 / GridCanvas.Instance._currentGridSize - 1) pixelsToCheck.Enqueue(new Vector2I(current.X + 1, current.Y));
