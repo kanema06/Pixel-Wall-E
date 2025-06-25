@@ -262,7 +262,12 @@ namespace PixelWallE
 private Token ReadIdentifier(int startPosition)
 {
     var start = _position;
-    
+     if (!char.IsLetter(Peek()))
+    {
+        Consume();
+        _currentLinePosition++;
+        return new Token(TokenType.Unknown, _input.Substring(start, 1), _lineNumber, startPosition);
+    }
 
     while (_position < _input.Length && (char.IsLetterOrDigit(Peek()) || Peek() == '_')) 
     {
