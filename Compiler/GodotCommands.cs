@@ -64,7 +64,13 @@ namespace PixelWallE
             }
 
             GridCanvas.Instance.UnPlaceTileInGrid(_currentPosition.X, _currentPosition.Y);
+            if(GridCanvas.Instance._currentBrushSize>1)
+            {
+                _currentPosition=new Vector2I(endPos.X+(dirX*GridCanvas.Instance._currentBrushSize/2), endPos.Y+(dirY*GridCanvas.Instance._currentBrushSize/2));
+            }
+            else{
             _currentPosition = endPos;
+            }
             GridCanvas.Instance.PlaceTileInGrid(
                 _currentPosition.X,
                 _currentPosition.Y,
